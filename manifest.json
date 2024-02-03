@@ -10,7 +10,7 @@
   "icons": {},
   "content_scripts": [
     {
-      "matches": ["https://blank.org/*"],
+      "matches": ["https://www.youtube.com/watch*"],
       "js": ["content-script/src/main.tsx"],
       "media": []
     }

@@ -3,21 +3,21 @@ import { createRoot } from "react-dom/client";
 import "./main.css";
 import App from "./App";
 
-const body = document.querySelector("body");
+let body =  document.getElementById('player');
+let data =  document.querySelector('#player-container-inner'); 
 
 const app = document.createElement("div");
 
 app.id = "root";
 
-// Make sure the element that you want to mount the app to has loaded. You can
-// also use `append` or insert the app using another method:
-// https://developer.mozilla.org/en-US/docs/Web/API/Element#methods
-//
-// Also control when the content script is injected from the manifest.json:
-// https://developer.chrome.com/docs/extensions/mv3/content_scripts/#run_time
-if (body) {
-  body.prepend(app);
+
+if (body) { 
+  body.append(app);
 }
+
+console.log(body);
+
+console.log(data);    
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
